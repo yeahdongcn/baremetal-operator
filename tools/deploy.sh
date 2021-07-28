@@ -139,7 +139,7 @@ fi
 if [ "${DEPLOY_BMO}" == "true" ]; then
     pushd "${SCRIPTDIR}"
     # shellcheck disable=SC2086
-    ${KUSTOMIZE} build "${BMO_SCENARIO}" | kubectl apply ${KUBECTL_ARGS} -f -
+    ${KUSTOMIZE} build "${BMO_SCENARIO}" >> ~/xx.log
     popd
 fi
 
